@@ -1,0 +1,104 @@
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocorrencias</title>
+  <!-- Incluindo Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <a class="navbar-brand" href="/">Suap 2</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/">Home</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/consulta/">Manter Pessoas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/reserva/">Manter ocupação de pessoas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/autores/">Manter instituição de ensino</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/editoras/">Manter áreas do saber</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/generos/">Manter cursos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="/generos/">Manter períodos de cursos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="/generos/">Manter disciplinas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="/generos/">Manter matrículas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="/generos/">Manter avaliações</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="/generos/">Manter frequência</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="/generos/">Manter turmas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="/generos/">Manter Cidades</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="/generos/">Manter ocorrências</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="/generos/">Manter disciplinas por cursos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="/generos/">Manter tipos de avaliação</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="/admin/">Administração</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+  <div class="container mt-5">
+    <h2 class="mb-4">Ocorrencias</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Descricao</th>
+              <th scope="col">Data</th>
+              <th scope="col">Curso</th>
+              <th scope="col">Disciplina</th>
+              <th scope="col">Pessoa</th>
+            </tr>
+            {% for Ocorrencias in ocorrencias %}
+          </thead>
+          <tbody>
+           <td>{{Ocorrencias.descricao}}</td>
+           <td>{{Ocorrencias.data}}</td>
+           <td>{{Ocorrencias.curso}}</td>
+           <td>{{Ocorrencias.disciplina}}</td>
+           <td>{{Ocorrencias.pessoa}}</td>
+          </tbody>
+           {% endfor %} 
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Incluindo jQuery e Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
